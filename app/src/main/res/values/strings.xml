@@ -4,4 +4,15 @@
     <string name="subtitle_app">Realiza pedidos de Comida Peruana!</string>
     <string name="btn_acceder">Acceder</string>
     <string name="btn_salir">Salir</string>
+
+
+    <!--Commit para probar el ejercicio de GIT -->
+
+    <string name="btn_limpiar">Limpiar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_ok">Ok</string>
+
+
+
+
 </resources>

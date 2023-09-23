@@ -7,4 +7,8 @@
     <string name="btn_acceder">Access</string>
     <string name="btn_salir">Exit</string>
 
+    <string name="btn_limpiar">Clear</string>
+    <string name="btn_cancelar">Cancel</string>
+    <string name="btn_ok">Ok</string>
+
 </resources>
