@@ -11,13 +11,23 @@ import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class PlatosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+        val nombresPlatosList = mutableListOf<String>();
+        val descripcionPlatosList = mutableListOf<String>();
+        val ImagenesPlatosList = mutableListOf<String>();
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_platos)
 
         val btnCerrarSesion: Button = findViewById(R.id.btnCerrarSesion)
+
+        val rv_list_platos: RecyclerView = findViewById(R.id.rv_list_platos)
 
         btnCerrarSesion.setOnClickListener{
 
@@ -27,6 +37,11 @@ class PlatosActivity : AppCompatActivity() {
             showModalConfirmExit(titleMsg, bodyMsg);
 
         }
+
+        rv_list_platos.layoutManager = LinearLayoutManager(this);
+
+        rv_list_platos.adapter = null; //EL PROVEEDOR DE LA INFORMACION (SERVICIO, LOCALSTORAGE, LISTA SIMPLES)
+
 
     }
 
