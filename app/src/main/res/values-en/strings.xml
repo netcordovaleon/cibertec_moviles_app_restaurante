@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppRestaurante</string>
+    <string name="titulo_app">Cooking App (USA)</string>
+    <string name="subtitle_app">Peruan food Orders</string>
+    <string name="btn_acceder">Access</string>
+    <string name="btn_salir">Exit</string>
+
+</resources>

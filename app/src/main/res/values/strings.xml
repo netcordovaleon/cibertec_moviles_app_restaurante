@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppRestaurante</string>
+    <string name="titulo_app">Cooking App</string>
+    <string name="subtitle_app">Realiza pedidos de Comida Peruana!</string>
+    <string name="btn_acceder">Acceder</string>
+    <string name="btn_salir">Salir</string>
+</resources>
