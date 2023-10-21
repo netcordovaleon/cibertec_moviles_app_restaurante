@@ -16,33 +16,32 @@ import androidx.recyclerview.widget.RecyclerView
 
 class PlatosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
-        val nombresPlatosList = mutableListOf<String>();
-        val descripcionPlatosList = mutableListOf<String>();
-        val ImagenesPlatosList = mutableListOf<String>();
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_platos)
 
+        // INICIO CODIGO PARA BOTON CERRAR SESSION
         val btnCerrarSesion: Button = findViewById(R.id.btnCerrarSesion)
-
-        val rv_list_platos: RecyclerView = findViewById(R.id.rv_list_platos)
-
         btnCerrarSesion.setOnClickListener{
-
             val titleMsg: String = "Confirmación"
             val bodyMsg: String = "¿Esta seguro que desea salir de la App?"
-
             showModalConfirmExit(titleMsg, bodyMsg);
-
         }
+        // FIN CODIGO PARA BOTON CERRAR SESSION
 
-        rv_list_platos.layoutManager = LinearLayoutManager(this);
+        // INICIO CARGAR PLATOS EN REPEATERVIEW
 
-        rv_list_platos.adapter = null; //EL PROVEEDOR DE LA INFORMACION (SERVICIO, LOCALSTORAGE, LISTA SIMPLES)
+        val platosRecycler: RecyclerView = findViewById(R.id.rv_list_platos)
+        platosRecycler.layoutManager = LinearLayoutManager(this)
 
+        val data = ArrayList<ItemsViewModel>();
+        //Aqui tambien podrian obtener informacion de alguna fuente para llenar DATA (como servicios, archivos, BD, etc)
+        for(i in 1 .. 20){
+            data.add(ItemsViewModel(R.drawable.bg_restaurante_background, "Plato de comida Nro " + i, "Descripcion " + i))
+        }
+        val adapter = CustomAdapter(data)
+        platosRecycler.adapter = adapter
 
+        // FIN CARGAR PLATOS EN REPEATERVIEW
     }
 
     private fun showModalConfirmExit(titleMsg: String, bodyMsg: String) {
