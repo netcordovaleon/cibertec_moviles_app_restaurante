@@ -46,6 +46,7 @@
             android:background="@color/main_orange"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Crear Nuevo Usuario" />
 
         <Button

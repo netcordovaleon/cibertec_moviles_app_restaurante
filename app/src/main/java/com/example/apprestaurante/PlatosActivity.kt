@@ -6,13 +6,14 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.CalendarContract.Colors
 import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.apprestaurante.RestauranteSqLite.CustomAdapter
+import com.example.apprestaurante.RestauranteSqLite.ItemsViewModel
 
 class PlatosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

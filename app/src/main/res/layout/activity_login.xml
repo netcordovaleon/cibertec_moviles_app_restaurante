@@ -5,29 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegUsuarioActivity">
-
+    tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="27dp"
         android:layout_marginTop="20dp"
+        android:textSize="27dp"
         android:gravity="center"
         android:textColor="@color/main_orange"
         android:layout_marginBottom="30dp"
-        android:text="Registro de Usuarios" />
+        android:text="Acceso" />
 
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ingrese correo electronico" />
+        android:text="Ingrese su usuario" />
 
     <EditText
-        android:id="@+id/txtCorreo"
+        android:id="@+id/LoginTxtUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -38,53 +37,22 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ingrese nombre de usuario" />
-
-    <EditText
-        android:id="@+id/txtUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="Ingrese su contraseña" />
 
     <EditText
-        android:id="@+id/txtContrasenia"
+        android:id="@+id/LoginTxtContrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:text="" />
 
-
     <Button
-        android:id="@+id/btnTest"
+        android:id="@+id/LoginbtnAcceder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/main_orange"
         android:layout_margin="10dp"
-        android:text="Ver" />
-
-    <Button
-        android:id="@+id/btnGrabarUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/main_orange"
-        android:layout_margin="10dp"
-        android:text="Grabar" />
-
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Volver" />
+        android:text="Login" />
 
 </LinearLayout>

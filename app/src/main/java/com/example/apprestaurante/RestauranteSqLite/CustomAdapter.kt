@@ -1,14 +1,12 @@
-package com.example.apprestaurante
+package com.example.apprestaurante.RestauranteSqLite
 
-import android.content.ClipData.Item
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.apprestaurante.R
 
 class CustomAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 

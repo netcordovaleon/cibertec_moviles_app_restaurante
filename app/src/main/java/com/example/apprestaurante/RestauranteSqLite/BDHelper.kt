@@ -1,7 +1,8 @@
-package com.example.apprestaurante
+package com.example.apprestaurante.RestauranteSqLite
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
@@ -24,10 +25,10 @@ class BDHelper (context: Context, factory: SQLiteDatabase.CursorFactory?)
     override fun onCreate(db: SQLiteDatabase) {
        var queryCreateTable =
                ("CREATE TABLE " + TABLA_USUARIOS + " ( " +
-                       COLUMN_ID + " INT PRIMARY KEY," +
-                       COLUMN_CORREO + " TEXT," +
-                       COLUMN_USUARIO + " TEXT," +
-                       COLUMN_CONTRASENA + " TEXT" + " )"
+                       COLUMN_ID + " INT PRIMARY KEY, " +
+                       COLUMN_CORREO + " TEXT, " +
+                       COLUMN_USUARIO + " TEXT, " +
+                       COLUMN_CONTRASENA + " TEXT " + " )"
                        )
         db.execSQL(queryCreateTable)
     }
@@ -41,6 +42,18 @@ class BDHelper (context: Context, factory: SQLiteDatabase.CursorFactory?)
         val db = this.writableDatabase
         db.insert(TABLA_USUARIOS,null, values)
         db.close()
+    }
+
+    fun ListarTodosRegistros() : Cursor? {
+        val db = this.readableDatabase
+        return db.rawQuery("SELECT * FROM " + TABLA_USUARIOS, null)
+    }
+
+    fun Acceder(usuario:String, contrasena: String) : Cursor? {
+        val db = this.readableDatabase
+        val sql = "SELECT * FROM " + TABLA_USUARIOS + " WHERE " + COLUMN_USUARIO + " = '" + usuario + "' AND " +
+                    COLUMN_CONTRASENA + " = '" + contrasena + "' "
+        return db.rawQuery(sql, null)
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
