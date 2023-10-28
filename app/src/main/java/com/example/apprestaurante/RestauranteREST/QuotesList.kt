@@ -1,10 +1,10 @@
 package com.example.apprestaurante.RestauranteREST
 
 data class QuotesList(
-    val count:Int,
-    val totalCount: Int,
-    val page: Int,
-    val totalPages: Int,
+    val count: Int,
     val lastItemIndex: Int,
-    val results: List<Result>
+    val page: Int,
+    val results: List<Result>,
+    val totalCount: Int,
+    val totalPages: Int
 )

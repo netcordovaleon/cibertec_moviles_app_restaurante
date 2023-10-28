@@ -12,8 +12,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.apprestaurante.RestauranteSqLite.CustomAdapter
-import com.example.apprestaurante.RestauranteSqLite.ItemsViewModel
+import com.example.apprestaurante.RestauranteRecyclerView.CustomAdapter
+import com.example.apprestaurante.RestauranteRecyclerView.ItemsViewModel
 
 class PlatosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +43,16 @@ class PlatosActivity : AppCompatActivity() {
         platosRecycler.adapter = adapter
 
         // FIN CARGAR PLATOS EN REPEATERVIEW
+
+        // INI REDIRECCION A CONSUMO REST
+
+        val btnVerLibros: Button = findViewById(R.id.btnVerLibrosCocina)
+
+        btnVerLibros.setOnClickListener {
+            val pantallaVerLibros = Intent(this, LibrosActivity::class.java)
+            startActivity(pantallaVerLibros)
+        }
+        // FIN REDIRECCION A CONSUMO REST
     }
 
     private fun showModalConfirmExit(titleMsg: String, bodyMsg: String) {

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.example.apprestaurante.RestauranteREST.QuoteAPI
+import com.example.apprestaurante.RestauranteREST.RetrofitHelper
 
 class PantallaPrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +17,9 @@ class PantallaPrincipalActivity : AppCompatActivity() {
         val btnSalir: Button = findViewById(R.id.btnSalir);
 
         val btnRegistrar: Button = findViewById(R.id.btnRegistrar);
+
+
+
 
         btnAcceder.setOnClickListener{
             val loginScreen = Intent(this, LoginActivity::class.java)

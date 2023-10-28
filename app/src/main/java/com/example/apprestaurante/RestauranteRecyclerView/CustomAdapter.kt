@@ -1,4 +1,4 @@
-package com.example.apprestaurante.RestauranteSqLite
+package com.example.apprestaurante.RestauranteRecyclerView
 
 import android.view.LayoutInflater
 import android.view.View
