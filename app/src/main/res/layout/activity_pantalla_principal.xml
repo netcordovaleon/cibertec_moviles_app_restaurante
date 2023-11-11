@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="350dp"
         app:srcCompat="@mipmap/bg_restaurante_foreground" />
 
     <TextView
@@ -38,6 +38,15 @@
         android:gravity="bottom"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnVerVideoPromocional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_orange"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Conoce más de nosotros" />
 
         <Button
             android:id="@+id/btnRegistrar"

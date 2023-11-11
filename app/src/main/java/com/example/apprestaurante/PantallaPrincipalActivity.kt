@@ -15,9 +15,8 @@ class PantallaPrincipalActivity : AppCompatActivity() {
 
         val btnAcceder = findViewById<Button>(R.id.btnAcceder);
         val btnSalir: Button = findViewById(R.id.btnSalir);
-
         val btnRegistrar: Button = findViewById(R.id.btnRegistrar);
-
+        val btnVerVideo: Button = findViewById(R.id.btnVerVideoPromocional)
 
 
 
@@ -33,6 +32,11 @@ class PantallaPrincipalActivity : AppCompatActivity() {
         btnRegistrar.setOnClickListener{
             val registroScreen = Intent(this, RegUsuarioActivity::class.java)
             startActivity(registroScreen)
+        }
+
+        btnVerVideo.setOnClickListener{
+            val videoScreen = Intent(this, VideoActivity::class.java)
+            startActivity(videoScreen)
         }
 
     }

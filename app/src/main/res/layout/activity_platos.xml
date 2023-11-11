@@ -53,6 +53,16 @@
         android:layout_height="wrap_content"
         android:text="Cerrar Sesion" />
 
+
+    <Button
+        android:id="@+id/btnGenerarDenuncia"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Generar denuncia" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list_platos"
         android:layout_width="match_parent"

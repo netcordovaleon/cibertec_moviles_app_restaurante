@@ -22,6 +22,7 @@ class PlatosActivity : AppCompatActivity() {
 
         // INICIO CODIGO PARA BOTON CERRAR SESSION
         val btnCerrarSesion: Button = findViewById(R.id.btnCerrarSesion)
+
         btnCerrarSesion.setOnClickListener{
             val titleMsg: String = "Confirmación"
             val bodyMsg: String = "¿Esta seguro que desea salir de la App?"
@@ -53,6 +54,17 @@ class PlatosActivity : AppCompatActivity() {
             startActivity(pantallaVerLibros)
         }
         // FIN REDIRECCION A CONSUMO REST
+
+
+        // INICIO IR A RECLAMOS
+
+        val btnGenerarDenuncia: Button = findViewById(R.id.btnGenerarDenuncia)
+
+        btnGenerarDenuncia.setOnClickListener {
+            val denunciaActivity = Intent(this, DenunciaActivity::class.java)
+            startActivity(denunciaActivity)
+        }
+        // FIN IR A RECLAMOS
     }
 
     private fun showModalConfirmExit(titleMsg: String, bodyMsg: String) {
